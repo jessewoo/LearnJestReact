@@ -4,10 +4,6 @@ import Card from './Card';
 import toJson from 'enzyme-to-json';
 
 // Most of the time, use shallow to test the simple unit component
-it('expect to render Card component', () => {
-  expect(shallow(<Card />).length).toEqual(1)
-})
-
 // Use Snapshots for renders
 it('expect to render Card component SNAPSHOT', () => {
   expect(toJson(shallow(<Card />))).toMatchSnapshot();
@@ -19,3 +15,7 @@ it('expect to render Card component SNAPSHOT', () => {
 // MOUNT - use a headless browser
 
 // Pure function components 
+
+// COVERAGE TESTING
+// npm t -- --coverage --watchAll=false
+// https://create-react-app.dev/docs/running-tests/#configuration
